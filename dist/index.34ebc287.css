@@ -43,4 +43,48 @@ input {
     transition-delay: 0s !important;
   }
 }
+.btn {
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  line-height: 1.3;
+  outline: 0;
+  border: 0;
+  font-size: 1.6rem;
+  padding: 2rem 2.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.btn--primary {
+  background-color: #181820;
+  color: white;
+}
+.btn--primary:hover, .btn--primary:focus {
+  background-color: #2e2e3d;
+}
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+  background: linear-gradient(to right, white 50%, #f94e4e 50%);
+}
+.nav__content {
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav__logo {
+  width: 20rem;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.nav__link {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: white;
+  font-size: 1.6rem;
+}
 /*# sourceMappingURL=index.34ebc287.css.map */

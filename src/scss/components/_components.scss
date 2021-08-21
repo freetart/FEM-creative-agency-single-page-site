@@ -1,2 +1,23 @@
 // imports
 @use "../abstracts/abstracts" as *;
+
+// ===== buttons =====
+
+.btn {
+  @include headingStyles;
+  outline: 0;
+  border: 0;
+  font-size: 1.6rem;
+  padding: 2rem 2.5rem;
+  transition: $mainTransition;
+
+  &--primary {
+    background-color: color(bgBlack);
+    color: color(white);
+
+    &:hover,
+    &:focus {
+      background-color: lighten(color(bgBlack), 10%);
+    }
+  }
+}
