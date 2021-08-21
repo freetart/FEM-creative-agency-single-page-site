@@ -4,9 +4,9 @@
 // ===== nav =====
 
 .nav {
-  position: fixed;
-  width: 100%;
-  z-index: 2000;
+  // position: fixed;
+  // width: 100%;
+  // z-index: 2000;
   background: linear-gradient(to right, color(white) 50%, color(red) 50%);
 
   &__content {
@@ -48,5 +48,31 @@
     &:focus::before {
       transform: scale(1);
     }
+  }
+}
+
+// ===== hero =====
+
+.hero {
+  &__content {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    align-items: center;
+  }
+
+  &__info {
+    @include sectionSpacing;
+    transform: translateX(20rem);
+  }
+
+  &__heading {
+    @include headingStyles;
+    font-size: 8rem;
+  }
+
+  &__lead {
+    @include textStyles;
+    font-size: 1.8rem;
+    padding: 2rem 0;
   }
 }

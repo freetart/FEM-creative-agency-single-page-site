@@ -9,6 +9,7 @@
   border: 0;
   font-size: 1.6rem;
   padding: 2rem 2.5rem;
+  display: inline-block;
   transition: $mainTransition;
 
   &--primary {
@@ -18,6 +19,16 @@
     &:hover,
     &:focus {
       background-color: lighten(color(bgBlack), 10%);
+    }
+  }
+
+  &--secondary {
+    background-color: color(red);
+    color: color(white);
+
+    &:hover,
+    &:focus {
+      background-color: lighten(color(red), 10%);
     }
   }
 }
