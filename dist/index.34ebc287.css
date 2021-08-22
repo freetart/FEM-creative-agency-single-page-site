@@ -68,6 +68,12 @@ input {
 .btn--secondary:hover, .btn--secondary:focus {
   background-color: #fa7f7f;
 }
+.wave-pattern {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 20%;
+}
 .nav {
   background: linear-gradient(to right, white 50%, #f94e4e 50%);
 }
@@ -128,5 +134,52 @@ input {
   line-height: 1.6;
   font-size: 1.8rem;
   padding: 2rem 0;
+}
+.design {
+  background-color: #181820;
+  color: white;
+}
+.design__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+}
+.design__img {
+  height: 90vh;
+}
+.design__info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem;
+  position: relative;
+  min-height: 90vh;
+}
+.design__heading {
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  line-height: 1.3;
+  font-size: 5.6rem;
+}
+.design__desc {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  font-size: 1.8rem;
+  padding: 2rem 0;
+}
+.design__link {
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  line-height: 1.3;
+  color: #f94e4e;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid #f94e4e;
+  transition: all 0.3s ease-in-out;
+}
+.design__link:hover, .design__link:focus {
+  color: #fa7f7f;
+  border-bottom: 0.2rem solid #fa7f7f;
 }
 /*# sourceMappingURL=index.34ebc287.css.map */
