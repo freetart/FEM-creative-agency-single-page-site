@@ -468,6 +468,13 @@ const carousel = ()=>{
     new _glideDefault.default(".glide", carouselConfig).mount();
 };
 carousel();
+const preloader = ()=>{
+    const preloaderEl = document.querySelector(".preloader");
+    window.addEventListener("load", function() {
+        preloaderEl.classList.add("hide-preloader");
+    });
+};
+preloader();
 
 },{"@glidejs/glide":"asg20","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"asg20":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
