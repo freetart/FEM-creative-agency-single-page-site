@@ -1,0 +1,33 @@
+@use "../abstracts/abstracts" as *;
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 1rem 2rem;
+  margin-top: 5rem;
+  position: relative;
+  z-index: 5;
+  background-color: color(bgBlack);
+
+  &__heading {
+    font-size: size(md);
+    color: color(white);
+  }
+
+  &__link {
+    color: color(red);
+    outline: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__logo {
+    width: 5rem;
+  }
+}
