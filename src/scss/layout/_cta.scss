@@ -1,0 +1,18 @@
+@use "../abstracts/abstracts" as *;
+
+.cta {
+  position: relative;
+
+  &__content {
+    @include sectionSpacing;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+  }
+
+  &__heading {
+    @include headingStyles;
+    font-size: 5.6rem;
+  }
+}
