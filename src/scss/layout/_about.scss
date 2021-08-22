@@ -1,0 +1,31 @@
+@use "../abstracts/abstracts" as *;
+
+.about {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  align-items: center;
+
+  &__content {
+    background-color: color(red);
+    color: color(white);
+    transform: translateY(-10rem);
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100%;
+    gap: 10rem;
+    padding: 10rem;
+  }
+
+  &__heading {
+    @include headingStyles;
+    font-size: 5.6rem;
+    position: relative;
+    z-index: 5;
+    transform: translateX(10rem);
+  }
+}

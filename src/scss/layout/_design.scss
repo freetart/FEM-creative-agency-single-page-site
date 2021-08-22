@@ -1,0 +1,55 @@
+@use "../abstracts/abstracts" as *;
+
+.design {
+  background-color: color(bgBlack);
+  color: color(white);
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+
+  &__img {
+    height: 90vh;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem;
+    position: relative;
+    height: 90vh;
+  }
+
+  &__heading {
+    @include headingStyles;
+    font-size: 5.6rem;
+  }
+
+  &__span {
+    color: color(red);
+  }
+
+  &__desc {
+    @include textStyles;
+    font-size: 1.8rem;
+    padding: 2rem 0;
+  }
+
+  &__link {
+    @include headingStyles;
+    color: color(red);
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.2rem solid color(red);
+    transition: $mainTransition;
+
+    &:hover,
+    &:focus {
+      color: lighten(color(red), 10%);
+      border-bottom: 0.2rem solid lighten(color(red), 10%);
+    }
+  }
+}

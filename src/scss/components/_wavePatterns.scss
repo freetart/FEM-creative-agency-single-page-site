@@ -1,0 +1,18 @@
+@use "../abstracts/abstracts" as *;
+
+.wave-pattern {
+  position: absolute;
+  width: 20%;
+  z-index: 100;
+
+  &--design {
+    top: 20%;
+    left: -10%;
+  }
+
+  &--glide {
+    top: -10%;
+    left: 27%;
+    transform: rotate(-45deg);
+  }
+}

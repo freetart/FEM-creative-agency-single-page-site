@@ -1,0 +1,26 @@
+@use "../abstracts/abstracts" as *;
+
+.feature {
+  width: 75%;
+  position: relative;
+  margin: 0 auto;
+
+  &__number {
+    @include headingStyles;
+    position: absolute;
+    top: -5rem;
+    left: -7rem;
+    font-size: 8rem;
+    opacity: 0.2;
+  }
+
+  &__title {
+    @include headingStyles;
+    font-size: 2rem;
+  }
+
+  &__desc {
+    @include textStyles;
+    font-size: 1.8rem;
+  }
+}

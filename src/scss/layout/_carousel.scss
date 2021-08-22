@@ -1,0 +1,60 @@
+@use "../abstracts/abstracts" as *;
+
+.glide {
+  position: relative;
+  transform: translateY(-10rem);
+  margin-top: -5px;
+
+  &__slide {
+    display: grid;
+    grid-template-columns: 1.5fr 2.5fr;
+    align-items: center;
+    height: 100%;
+
+    &:hover {
+      cursor: grab;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__left {
+    background-color: color(bgBlack);
+    color: color(white);
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+    height: 100%;
+  }
+
+  &__heading {
+    @include headingStyles;
+    font-size: 5.6rem;
+  }
+
+  &__right {
+    position: relative;
+    height: 100%;
+
+    &-content {
+      position: absolute;
+      bottom: 5rem;
+      right: 5rem;
+      background-color: color(bgBlack);
+      color: color(white);
+      padding: 2rem;
+    }
+  }
+
+  &__subheading {
+    @include headingStyles;
+    font-size: 2rem;
+  }
+
+  &__desc {
+    @include textStyles;
+    font-size: 1.8rem;
+  }
+}
