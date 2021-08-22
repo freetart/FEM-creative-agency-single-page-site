@@ -456,6 +456,62 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"38Jk0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _preloaderJs = require("./preloader.js");
+var _preloaderJsDefault = parcelHelpers.interopDefault(_preloaderJs);
+var _carouselJs = require("./carousel.js");
+var _carouselJsDefault = parcelHelpers.interopDefault(_carouselJs);
+const init = ()=>{
+    _preloaderJsDefault.default();
+    _carouselJsDefault.default();
+};
+window.addEventListener("DOMContentLoaded", init);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","./preloader.js":"3BtsI","./carousel.js":"2UNTG"}],"JacNc":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule') return;
+        // Skip duplicate re-exports when they have the same value.
+        if (key in dest && dest[key] === source[key]) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"3BtsI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const preloader = ()=>{
+    const preloaderEl = document.querySelector(".preloader");
+    window.addEventListener("load", function() {
+        preloaderEl.classList.add("hide-preloader");
+    });
+};
+exports.default = preloader;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2UNTG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
 var _glide = require("@glidejs/glide");
 var _glideDefault = parcelHelpers.interopDefault(_glide);
 const carousel = ()=>{
@@ -467,14 +523,7 @@ const carousel = ()=>{
     };
     new _glideDefault.default(".glide", carouselConfig).mount();
 };
-carousel();
-const preloader = ()=>{
-    const preloaderEl = document.querySelector(".preloader");
-    window.addEventListener("load", function() {
-        preloaderEl.classList.add("hide-preloader");
-    });
-};
-preloader();
+exports.default = carousel;
 
 },{"@glidejs/glide":"asg20","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"asg20":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -3137,38 +3186,6 @@ var Glide$1 = function(_Core) {
 }(Glide);
 exports.default = Glide$1;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"JacNc":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule') return;
-        // Skip duplicate re-exports when they have the same value.
-        if (key in dest && dest[key] === source[key]) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}]},["lDN0V","38Jk0"], "38Jk0", "parcelRequirea1a7")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}]},["lDN0V","38Jk0"], "38Jk0", "parcelRequirea1a7")
 
 //# sourceMappingURL=index.4645a5bb.js.map

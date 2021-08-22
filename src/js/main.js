@@ -1,22 +1,9 @@
-import Glide from "@glidejs/glide";
+import preloader from "./preloader.js";
+import carousel from "./carousel.js";
 
-const carousel = () => {
-  const carouselConfig = {
-    type: "carousel",
-    autoplay: 12000,
-    perView: 1,
-    hoverpause: true,
-  };
-
-  new Glide(".glide", carouselConfig).mount();
+const init = () => {
+  preloader();
+  carousel();
 };
-carousel();
 
-const preloader = () => {
-  const preloaderEl = document.querySelector(".preloader");
-
-  window.addEventListener("load", function () {
-    preloaderEl.classList.add("hide-preloader");
-  });
-};
-preloader();
+window.addEventListener("DOMContentLoaded", init);
