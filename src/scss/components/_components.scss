@@ -37,16 +37,26 @@
 
 .wave-pattern {
   position: absolute;
-  top: 20%;
-  left: -10%;
   width: 20%;
+  z-index: 100;
+
+  &--design {
+    top: 20%;
+    left: -10%;
+  }
+
+  &--glide {
+    top: -10%;
+    left: 27%;
+    transform: rotate(-45deg);
+  }
 }
 
 // ===== feature =====
 
 .feature {
-  position: relative;
   width: 75%;
+  position: relative;
   margin: 0 auto;
 
   &__number {

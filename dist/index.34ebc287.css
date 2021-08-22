@@ -22,6 +22,7 @@ li {
 img {
   width: 100%;
   object-fit: cover;
+  pointer-events: none;
 }
 button {
   cursor: pointer;
@@ -70,13 +71,21 @@ input {
 }
 .wave-pattern {
   position: absolute;
+  width: 20%;
+  z-index: 100;
+}
+.wave-pattern--design {
   top: 20%;
   left: -10%;
-  width: 20%;
+}
+.wave-pattern--glide {
+  top: -10%;
+  left: 27%;
+  transform: rotate(-45deg);
 }
 .feature {
-  position: relative;
   width: 75%;
+  position: relative;
   margin: 0 auto;
 }
 .feature__number {
@@ -238,6 +247,61 @@ input {
   font-size: 5.6rem;
   position: relative;
   z-index: 5;
-  transform: translateX(13rem);
+  transform: translateX(10rem);
+}
+.glide {
+  position: relative;
+  transform: translateY(-10rem);
+  margin-top: -5px;
+}
+.glide__slide {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  align-items: center;
+  height: 100%;
+}
+.glide__slide:hover {
+  cursor: grab;
+}
+.glide__slide:active {
+  cursor: grabbing;
+}
+.glide__left {
+  background-color: #181820;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+  height: 100%;
+}
+.glide__heading {
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  line-height: 1.3;
+  font-size: 5.6rem;
+}
+.glide__right {
+  position: relative;
+  height: 100%;
+}
+.glide__right-content {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  background-color: #181820;
+  color: white;
+  padding: 2rem;
+}
+.glide__subheading {
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  line-height: 1.3;
+  font-size: 2rem;
+}
+.glide__desc {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  font-size: 1.8rem;
 }
 /*# sourceMappingURL=index.34ebc287.css.map */
