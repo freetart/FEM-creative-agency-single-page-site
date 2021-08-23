@@ -4,6 +4,7 @@ single page site challenge for frontend mentor
 site: https://fem-creative-agency-single-page-site-challenge.netlify.app/
 
 #### Features
+- carousel
 - mobile menu & toggle
 - responsive design
 - preloader
@@ -15,3 +16,4 @@ site: https://fem-creative-agency-single-page-site-challenge.netlify.app/
 
 #### Dependencies
 - parcel
+- glidejs
