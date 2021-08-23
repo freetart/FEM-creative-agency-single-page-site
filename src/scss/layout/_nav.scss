@@ -2,6 +2,7 @@
 
 .nav {
   background: linear-gradient(to right, color(white) 50%, color(red) 50%);
+  position: relative;
 
   &__content {
     @include sectionSpacing;
@@ -13,7 +14,7 @@
       justify-content: space-between;
     }
 
-    @include responsive(sm) {
+    @include responsive(lg) {
       background-color: color(white);
     }
   }
@@ -27,8 +28,14 @@
     align-items: center;
     gap: 3rem;
 
-    @include responsive(lg) {
-      display: none;
+    &--desktop {
+      @include responsive(lg) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      flex-direction: column;
     }
   }
 

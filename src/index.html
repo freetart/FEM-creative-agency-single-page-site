@@ -11,6 +11,13 @@
       rel="stylesheet"
       href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Frontend Mentor | Creative Agency Single Page Site</title>
   </head>
   <body>
@@ -33,7 +40,7 @@
           src="./assets/desktop/logo.svg"
           alt="creative logo"
         />
-        <ul class="nav__list">
+        <ul class="nav__list nav__list--desktop">
           <li class="nav__item">
             <a class="nav__link" href="#!">About</a>
           </li>
@@ -47,6 +54,29 @@
             <a class="btn btn--primary" href="#!">Schedule a Call</a>
           </li>
         </ul>
+        <!-- mobile menu toggle -->
+        <div class="mobile-menu">
+          <button class="mobile-menu__toggle">
+            <i class="fas fa-ellipsis-h mobile-menu__icon"></i>
+          </button>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+          <ul class="nav__list nav__list--mobile">
+            <li class="nav__item">
+              <a class="nav__link" href="#!">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#!">Service</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#!">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a class="btn btn--secondary" href="#!">Schedule a Call</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 

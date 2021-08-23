@@ -1,0 +1,63 @@
+@use "../abstracts/abstracts" as *;
+
+.menu {
+  position: absolute;
+  top: 30rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: color(white);
+  padding: 5rem;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: $mainTransition;
+
+  @media (min-width: 950px) {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  @include responsive(lg) {
+    width: 50vw;
+  }
+
+  @include responsive(md) {
+    width: 75vw;
+  }
+
+  @include responsive(md) {
+    width: 90vw;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.mobile-menu {
+  display: none;
+
+  @include responsive(lg) {
+    display: block;
+  }
+
+  &__toggle {
+    background-color: transparent;
+    border: 0;
+  }
+
+  &__icon {
+    font-size: 5rem;
+    color: color(bgBlack);
+    transition: $mainTransition;
+
+    &.active {
+      color: color(red);
+      transform: rotate(180deg);
+    }
+  }
+}

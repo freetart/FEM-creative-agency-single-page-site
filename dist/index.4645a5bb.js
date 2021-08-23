@@ -460,13 +460,16 @@ var _preloaderJs = require("./preloader.js");
 var _preloaderJsDefault = parcelHelpers.interopDefault(_preloaderJs);
 var _carouselJs = require("./carousel.js");
 var _carouselJsDefault = parcelHelpers.interopDefault(_carouselJs);
+var _mobileMenuJs = require("./mobileMenu.js");
+var _mobileMenuJsDefault = parcelHelpers.interopDefault(_mobileMenuJs);
 const init = ()=>{
     _preloaderJsDefault.default();
+    _mobileMenuJsDefault.default();
     _carouselJsDefault.default();
 };
 window.addEventListener("DOMContentLoaded", init);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","./preloader.js":"3BtsI","./carousel.js":"2UNTG"}],"JacNc":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","./preloader.js":"3BtsI","./carousel.js":"2UNTG","./mobileMenu.js":"llyhk"}],"JacNc":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -3185,6 +3188,20 @@ var Glide$1 = function(_Core) {
     return Glide$$1;
 }(Glide);
 exports.default = Glide$1;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"llyhk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const mobileMenu = ()=>{
+    const toggle = document.querySelector(".mobile-menu__toggle");
+    const menu = document.querySelector(".menu");
+    const menuIcon = document.querySelector(".mobile-menu__icon");
+    toggle.addEventListener("click", ()=>{
+        menu.classList.toggle("active");
+        menuIcon.classList.toggle("active");
+    });
+};
+exports.default = mobileMenu;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}]},["lDN0V","38Jk0"], "38Jk0", "parcelRequirea1a7")
 
