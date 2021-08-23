@@ -8,17 +8,34 @@
   &--design {
     top: 20%;
     left: -10%;
+
+    @include responsive(md) {
+      top: -5%;
+    }
   }
 
   &--glide {
     top: -10%;
     left: 27%;
     transform: rotate(-45deg);
+
+    @include responsive(lg) {
+      left: 40%;
+    }
+
+    @include responsive(md) {
+      top: -5%;
+    }
   }
 
   &--cta {
     width: 15%;
     top: -40%;
     left: -10%;
+
+    @include responsive(xl) {
+      top: 50%;
+      left: -5%;
+    }
   }
 }

@@ -5,6 +5,10 @@
   position: relative;
   margin: 0 auto;
 
+  @include responsive(lg) {
+    width: 100%;
+  }
+
   &__number {
     @include headingStyles;
     position: absolute;

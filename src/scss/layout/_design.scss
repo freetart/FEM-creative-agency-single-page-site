@@ -8,10 +8,18 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: start;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__img {
     height: 90vh;
+
+    @include responsive(lg) {
+      height: 100%;
+    }
   }
 
   &__info {
@@ -21,11 +29,23 @@
     padding: 5rem;
     position: relative;
     height: 90vh;
+
+    @include responsive(lg) {
+      height: 100%;
+    }
+
+    @include responsive(md) {
+      order: -1;
+    }
   }
 
   &__heading {
     @include headingStyles;
     font-size: 5.6rem;
+
+    @include responsive(sm) {
+      font-size: 3.2rem;
+    }
   }
 
   &__span {
@@ -36,6 +56,10 @@
     @include textStyles;
     font-size: 1.8rem;
     padding: 2rem 0;
+
+    @include responsive(sm) {
+      font-size: 1.5rem;
+    }
   }
 
   &__link {

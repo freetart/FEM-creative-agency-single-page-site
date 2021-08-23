@@ -5,21 +5,73 @@
     display: grid;
     grid-template-columns: 1.5fr 2fr;
     align-items: center;
+
+    @include responsive(xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__info {
     @include sectionSpacing;
     transform: translateX(20rem);
+
+    @include responsive(xl) {
+      transform: translateX(0);
+    }
   }
 
   &__heading {
     @include headingStyles;
     font-size: 8rem;
+
+    @include responsive(sm) {
+      font-size: 4rem;
+    }
   }
 
   &__lead {
     @include textStyles;
     font-size: 1.8rem;
     padding: 2rem 0;
+
+    @include responsive(sm) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__showcase-desktop,
+  &__showcase-tablet,
+  &__showcase-mobile {
+    height: 100%;
+  }
+
+  &__showcase-desktop {
+    @include responsive(xl) {
+      display: none;
+    }
+  }
+
+  &__showcase-tablet {
+    display: none;
+
+    @include responsive(xl) {
+      display: block;
+    }
+
+    @include responsive(sm) {
+      display: none;
+    }
+  }
+
+  &__showcase-mobile {
+    display: none;
+
+    @include responsive(sm) {
+      display: block;
+    }
   }
 }

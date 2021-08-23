@@ -5,11 +5,23 @@
   transform: translateY(-10rem);
   margin-top: -5px;
 
+  @include responsive(lg) {
+    transform: translateY(0);
+  }
+
   &__slide {
     display: grid;
     grid-template-columns: 1.5fr 2.5fr;
     align-items: center;
     height: 100%;
+
+    @include responsive(xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(md) {
+      grid-template-columns: 1fr;
+    }
 
     &:hover {
       cursor: grab;
@@ -28,11 +40,20 @@
     padding: 5rem;
     height: 100%;
     margin-top: -5px;
+    height: 100%;
+
+    @include responsive(xl) {
+      margin-top: 0;
+    }
   }
 
   &__heading {
     @include headingStyles;
     font-size: 5.6rem;
+
+    @include responsive(sm) {
+      font-size: 3.2rem;
+    }
   }
 
   &__right {
@@ -57,5 +78,9 @@
   &__desc {
     @include textStyles;
     font-size: 1.8rem;
+  }
+
+  &__img {
+    height: 100%;
   }
 }
