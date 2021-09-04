@@ -14,6 +14,6 @@ site: https://fem-creative-agency-single-page-site-challenge.netlify.app/
 - scss
 - vanilla javascript w/ modules
 
-#### Dependencies
+#### Libraries
 - parcel
 - glidejs
